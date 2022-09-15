@@ -1,35 +1,44 @@
-.outer {
-  background-color: purple;
-  width: 500px;
-  height: 500px;
-  margin: 0 auto;
+div {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
 }
-.inner {
-  background-color: cadetblue;
-  width: 50%;
-  height: 50%;
-  /* transition: transform 1s, background-color 1s; */
-}
-.outer:hover .inner {
-  /* background-color: bisque;
-  transform: translateX(100%); */
-  animation: travel 2s ease-in-out;
-  animation-iteration-count: 4;
-  animation-direction: alternate;
-  animation-fill-mode: forwards;
+div i {
+  font-size: 10rem;
+  color: brown;
 }
 
-@keyframes travel {
+.fa-bell:hover {
+  animation-name: shake;
+  animation-duration: 0.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+.fa-dollar-sign {
+  animation: dance 0.5s ease-in-out infinite alternate forwards;
+}
+.fa-dollar-sign:hover {
+  animation-play-state: paused;
+}
+@keyframes shake {
   0% {
-    transform: translateX(0);
+    transform: rotate(20deg);
   }
-  33% {
-    transform: translateY(100%);
-  }
-  66% {
-    transform: translate(100%, 100%);
+  50% {
+    transform: rotate(-20deg);
   }
   100% {
-    transform: translateX(100%);
+    transform: rotate(0deg);
+  }
+}
+@keyframes dance {
+  from {
+    transform: skew(30deg);
+  }
+  to {
+    transform: skew(-30deg);
   }
 }
