@@ -1,44 +1,36 @@
-div {
-  height: 100vh;
+.container {
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 5rem;
-}
-div i {
-  font-size: 10rem;
-  color: brown;
 }
 
-.fa-bell:hover {
-  animation-name: shake;
-  animation-duration: 0.2s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-  animation-direction: alternate;
+.card {
+  background-color: grey;
+  padding: 2rem;
+  box-shadow: 1px 3px 10px 2px;
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  animation: dropdown 4s ease-in-out forwards;
+  position: absolute;
 }
-.fa-dollar-sign {
-  animation: dance 0.5s ease-in-out infinite alternate forwards;
+.card button {
+  border: none;
+  padding: 1rem;
+  background-color: red;
+  border-radius: 10px;
+  color: white;
+  width: 7rem;
+  cursor: pointer;
 }
-.fa-dollar-sign:hover {
-  animation-play-state: paused;
+.card button:hover {
+  background-color: gold;
+  color: red;
 }
-@keyframes shake {
+@keyframes dropdown {
   0% {
-    transform: rotate(20deg);
-  }
-  50% {
-    transform: rotate(-20deg);
+    top: -25%;
   }
   100% {
-    transform: rotate(0deg);
-  }
-}
-@keyframes dance {
-  from {
-    transform: skew(30deg);
-  }
-  to {
-    transform: skew(-30deg);
+    top: 50%;
   }
 }
