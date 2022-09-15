@@ -49,3 +49,11 @@ body {
     transform: translateY(1px);
   }
 }
+
+.right {
+  animation: right 5s linear infinite;
+}
+
+.pop-up {
+  animation: pop-up 1s linear infinite;
+}
