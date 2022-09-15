@@ -13,8 +13,10 @@
 .outer:hover .inner {
   /* background-color: bisque;
   transform: translateX(100%); */
-  animation: travel 1s ease-in-out;
-  animation-iteration-count: 1;
+  animation: travel 2s ease-in-out;
+  animation-iteration-count: 4;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
 }
 
 @keyframes travel {
